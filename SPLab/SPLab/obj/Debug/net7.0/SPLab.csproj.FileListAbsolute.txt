@@ -1,0 +1,14 @@
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\bin\Debug\net7.0\SPLab.exe
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\bin\Debug\net7.0\SPLab.deps.json
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\bin\Debug\net7.0\SPLab.runtimeconfig.json
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\bin\Debug\net7.0\SPLab.dll
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\bin\Debug\net7.0\SPLab.pdb
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.GeneratedMSBuildEditorConfig.editorconfig
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.AssemblyInfoInputs.cache
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.AssemblyInfo.cs
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.csproj.CoreCompileInputs.cache
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.dll
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\refint\SPLab.dll
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.pdb
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\SPLab.genruntimeconfig.cache
+D:\F3S1\SP\LaboratorSP\SPLab\SPLab\obj\Debug\net7.0\ref\SPLab.dll
