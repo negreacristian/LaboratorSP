@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Collections.Specialized.BitVector32;
 
 namespace SPLab
 {
@@ -10,27 +12,27 @@ namespace SPLab
     {
         static void Main(string[] args)
         {
-            Book discoTitanic = new Book("Disco Titanic");
-            Author author = new Author("Radu Pavel Gheo");
+            Book OSeara = new Book("Noapte buna, copii!");
+            Author NC = new Author("Negrea Cristian");
 
-            discoTitanic.AddAuthor(author);
+            OSeara.AddAuthor(NC);
 
-            int indexChapterOne = discoTitanic.CreateChapter("Capitolul 1");
-            Chapter chp1 = discoTitanic.GetChapter(indexChapterOne);
+            Section cap1 = new Section("Capitolul 1");
+            Section cap11 = new Section("Capitolul 1.1");
+            Section cap111 = new Section("Capitolul 1.1.1");
+            Section cap1111 = new Section("Subchapter 1.1.1.1");
 
-            int indexSubChapterOneOne = chp1.CreateSubChapter("Subcapitolul 1.1");
-            SubChapter scOneOne = chp1.GetSubChapter(indexSubChapterOneOne);
+            OSeara.AddContent(new Paragraph("Multumesc celor care ..."));
+            OSeara.AddContent(cap1);
 
-            scOneOne.CreateNewParagraph("Paragraph 1");
-            scOneOne.CreateNewParagraph("Paragraph 2");
-            scOneOne.CreateNewParagraph("Paragraph 3");
-            scOneOne.CreateNewImage("Image 1");
-            scOneOne.CreateNewParagraph("Paragraph 4");
-            scOneOne.CreateNewTable("Table 1");
-            scOneOne.CreateNewParagraph("Pragraph 5");
-
-            scOneOne.Print();
-
+            cap1.Add(new Paragraph("Moto capitol"));
+            cap1.Add(cap11);
+            cap11.Add(new Paragraph("Text from subchapter 1.1"));
+            cap11.Add(cap111);
+            cap111.Add(new Paragraph("Text from subchapter 1.1.1"));
+            cap111.Add(cap1111);
+            cap1111.Add(new Image("Image subchapter 1.1.1.1"));
+            OSeara.Print();
         }
     }
 }
