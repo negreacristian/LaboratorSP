@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\F3S1\\SP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj": {}
+    "D:\\F3S1\\DesignP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj": {}
   },
   "projects": {
-    "D:\\F3S1\\SP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj": {
+    "D:\\F3S1\\DesignP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\F3S1\\SP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj",
+        "projectUniqueName": "D:\\F3S1\\DesignP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj",
         "projectName": "SPLab",
-        "projectPath": "D:\\F3S1\\SP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj",
+        "projectPath": "D:\\F3S1\\DesignP\\LaboratorSP\\SPLab\\SPLab\\SPLab.csproj",
         "packagesPath": "C:\\Users\\negre\\.nuget\\packages\\",
-        "outputPath": "D:\\F3S1\\SP\\LaboratorSP\\SPLab\\SPLab\\obj\\",
+        "outputPath": "D:\\F3S1\\DesignP\\LaboratorSP\\SPLab\\SPLab\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

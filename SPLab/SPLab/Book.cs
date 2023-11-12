@@ -1,44 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace SPLab
 {
-    public class Book
+    internal class Book : Section
     {
-        private string title;
         private List<Author> authors = new List<Author>();
         private TableOfContent tableOfContent;
-        private List<Chapter> Chapters = new List<Chapter>();
 
-        public Book(string title) { this.title = title; }
+        public Book(string title) { this.Title = title; }
         public Book(string title, Author author)
         {
-            this.title = title;
+            this.Title = title;
             AddAuthor(author);
         }
 
         public Book(string title, Author author, TableOfContent tableOfContent)
         {
-            this.title = title;
+            this.Title = title;
             AddAuthor(author);
             this.tableOfContent = tableOfContent;
         }
 
-        public string GetTitle() { return this.title; }
-
-        public void Print()
+        public override void Print()
         {
-            Console.WriteLine("Book Title: " + title);
+            Console.WriteLine("Book Title: " + Title);
             Console.WriteLine("Authors:");
+
             foreach (Author author in authors)
             {
-                Console.WriteLine(" - " + author.GetName());
+                Console.WriteLine("Author: " + author.Name);
             }
 
             if (tableOfContent != null)
             {
                 Console.WriteLine("Table of Contents:");
                 tableOfContent.Print();
+            }
+
+            foreach (var element in elements)
+            {
+                element.Print();
             }
         }
 
@@ -47,11 +50,10 @@ namespace SPLab
             this.authors.Add(author);
         }
 
-        public int CreateChapter(string chapterName)
+        public void AddContent(Element element)
         {
-            this.Chapters.Add(new Chapter(chapterName));
-            return this.Chapters.Count;
+            elements.Add(element);
         }
-        public Chapter GetChapter(int index) { return Chapters[index - 1]; }
+
     }
 }

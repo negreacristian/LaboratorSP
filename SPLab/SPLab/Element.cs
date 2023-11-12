@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SPLab
 {
-    abstract class Element
+    internal abstract class Element
     {
-        public virtual void Print() { }
+        public abstract void Add(Element element);
+        public abstract void Remove(Element element);
+        public abstract Element Get(int index);
+        public abstract void Print();
     }
 }
