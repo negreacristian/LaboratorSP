@@ -26,7 +26,7 @@ namespace SPLab
         public override void Print()
         {
             Console.WriteLine("Book Title: " + Title);
-            Console.WriteLine("Authors:");
+            Console.WriteLine("Authors: ");
 
             foreach (Author author in authors)
             {
@@ -35,7 +35,7 @@ namespace SPLab
 
             if (tableOfContent != null)
             {
-                Console.WriteLine("Table of Contents:");
+                Console.WriteLine("Table of Contents: ");
                 tableOfContent.Print();
             }
 

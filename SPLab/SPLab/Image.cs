@@ -9,21 +9,18 @@ namespace SPLab
 {
     internal class Image : Element
     {
-        private string imagename;
-        public string ImageName { get { return imagename; } set { this.imagename = value; } }
-        public Image() { }
-        public Image(string imageName)
-        {
-            this.imagename = imageName;
+        private string url;
+        private ImageContent content;
+        
+            
+        public Image(string _url) {
+            url = _url;
+            content = new ImageContent(url);
         }
-
-
-        public override void Print() { Console.WriteLine(imagename); }
-
-
+        
         public override void Add(Element element)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public override void Remove(Element element)
@@ -31,9 +28,17 @@ namespace SPLab
             throw new NotImplementedException();
         }
 
+        public ImageContent Content() 
+        { 
+            return content.GetImageContent(); 
+        }
+
         public override Element Get(int index)
         {
             throw new NotImplementedException();
         }
+
+        public override void Print() { Console.WriteLine(url); }
+
     }
 }
