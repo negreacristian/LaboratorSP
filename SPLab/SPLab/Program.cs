@@ -12,36 +12,27 @@ namespace SPLab
     {
         static void Main()
         {
-            var startTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            ImageProxy img1 = new ImageProxy("Pamela Anderson");
-            ImageProxy img2 = new ImageProxy("Kim Kardashian");
-            ImageProxy img3 = new ImageProxy("Kirby Griffin");
+            Section cap1 = new Section("Capitolul 1");
+            Paragraph p1 = new Paragraph("Paragraph 1");
+            cap1.Add(p1);
 
-            Section playboyS1 = new Section("Front Cover");
-            playboyS1.Add(img1);
+            Paragraph p2 = new Paragraph("Paragraph 2");
+            cap1.Add(p2);
 
-            Section playboyS2 = new Section("Summer Girls");
-            playboyS2.Add(img2);
-            playboyS2.Add(img3);
+            Paragraph p3 = new Paragraph("Paragraph 3");
+            cap1.Add(p3);
+            Paragraph p4 = new Paragraph("Paragraph 4");
+            cap1.Add(p4);
 
-            Book playboy = new Book("Playboy");
-            playboy.Add(playboyS1);
-            playboy.Add(playboyS2);
+            Console.WriteLine("Printing without Alignment\n");
+            cap1.Print();
 
-            var endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            // var creationTime = endTime - startTime;
-            Console.WriteLine($"Creation of the content took {endTime - startTime} milliseconds");
+            p1.SetAlignStrategy(new AlignCenter());
+            p2.SetAlignStrategy(new AlignRight());
+            p3.SetAlignStrategy(new AlignLeft());
 
-            startTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-
-            playboyS1.Print();
-            endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            Console.WriteLine($"Printing of the section 1 took {endTime - startTime} milliseconds");
-
-            startTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            playboyS1.Print();
-            endTime = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            Console.WriteLine($"Printing again the section 1 took {endTime - startTime} milliseconds");
+            Console.WriteLine("\nPrinting with Alignment\n");
+            cap1.Print();
         }
     }
 }
